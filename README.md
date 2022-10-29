@@ -1,4 +1,4 @@
-# fcitx5.nvim
+# IMSwitch.nvim
 
 ## Installation
 + packer:
