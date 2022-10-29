@@ -11,7 +11,7 @@ use 'hosxy/IMSwitch.nvim'
   + description: input method name 
   + type: string
   + value: `fcitx5` or `fcitx5_rime` or `windows`
-  + default: `fcitx5`(default: `windows` on Windows)
+  + default: `fcitx5` (default: `windows` on Windows)
 + `disable_im`
   + description: disable input method after nvim start(if your default input method isn't Eng,maybe need this,maybe don't work)
   + type: boolean
