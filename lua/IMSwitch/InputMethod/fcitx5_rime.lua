@@ -5,7 +5,7 @@ local function dbus_cmd_fcitx5_rime(cmd)
     return "dbus-send --session --print-reply=literal --type=method_call --dest=org.fcitx.Fcitx5 /rime org.fcitx.Fcitx.Rime1."..cmd
 end
 
-utils.ImStatus = function(ImName)
+utils.ImStatus = function()
     local status =  string.match(io.popen(dbus_cmd_fcitx5_rime("IsAsciiMode")):read("*a"),"%s(%l+)%c")
     if status == "false" then
         return true
