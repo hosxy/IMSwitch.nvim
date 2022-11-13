@@ -35,7 +35,14 @@ local setup = function(configs)
     })
 
     if configs.disable_im == true then
-        IMSwitch.deactivate_im()
+        vim.api.nvim_create_autocmd({"UIEnter"},{
+        group = IM_Switch,
+        pattern = "*",
+        callback = function()
+            IMSwitch.deactivate_im()
+        end,
+    })
+        
     end
 
 end
